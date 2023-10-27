@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Registro v2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+   
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<style>
+ 
+    .form-group {
+        position: relative;
+    }
+
+    
+    .error {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+        color: red;
+        font-weight: bold;
+        font-size: 12px;
+        margin-top: 5px; /* Ajusta según sea necesario */
+    }
+</style>
+
+<body class="bg-light">
+    <div class="container">
+        <main>
+            <form action="#" method="get" class="row mt-4">
+                <div class="col">
+                    <h1 class="mb-3">Registro</h1>
+                    <hr class="my-4" />
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="userNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="userNombre" required />
+                            <span class="error">Debe ingresar un nombre</span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="userApellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="userApellido" required />
+                            <span class="error">Debe ingresar un apellido</span>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" required />
+                            <span class="error">Debe ingresar una dirección de email</span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="userPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="userPassword1" required />
+                            <span class="error">Ingrese una contraseña mínimo de 6 caracteres</span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="userPassword2" class="form-label">Repetir contraseña</label>
+                            <input type="password" class="form-control" id="userPassword2" required />
+                            <span class="error">La contraseña debe ser igual a "contraseña"</span>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <button
+                            type="button"
+                            class="btn btn-link ps-0 btn-custom"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalTerminos"
+                            id="botonTerminos"
+                        >
+                            Términos del servicio
+                        </button>
+                        
+
+                        <button
+                            class="btn btn-primary"
+                            type="button"
+                            onclick="validarFormulario()"
+                        >
+                            Registrarme
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">
+                Este sitio forma parte de
+                <a href="https://jovenesaprogramar.edu.uy/" target="_blank"
+                >Jovenes a Programar</a
+                >
+            </p>
+            <p class="mb-1">
+                Es un sitio generado con fines estrictamente educativos. No realiza
+                registros ni guarda datos de ningún tipo . Por ahora Fernando ....
+            </p>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">
+                        Términos y condiciones del servicio.
+                    </h1>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Al aceptar los terminos y condiciones de uso :<br>
+                        1 : Sus datos seran vendidos al mejor postor<br>
+                        2 : Toda informacion relevante sera usado para fines "cientificos"<br>
+                        3 : Esta aceptando que la milanesa de pollo no es una milanesa realmente<br>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="userTerminos" required />
+                            >Acepto los términos y condiciones del servicio.</label
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacion.js"></script>
+</body>
+</html>
